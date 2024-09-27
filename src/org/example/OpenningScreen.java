@@ -1,54 +1,40 @@
 package org.example;
 
-
 import javax.swing.*;
 import java.awt.*;
 
-
 public class OpenningScreen extends JPanel {
-    private final Image background = new ImageIcon("src/resources/1-3f43aeb9.png").getImage();
+    private final Image background = new ImageIcon("src/resources/MARVEL.png").getImage();// תמונת פתיחה של המשחק.
     private JLabel label;
-    private static final int START_X=380;
-    private static final int START_Y=250;
-    private static final int ELEMENT_WIDTH=200;
-    private static final int ELEMENT_HEIGHT=50;
-
-    private static final int LABEL_WIDTH=700;
-    private static final int LABEL_HEIGHT=100;
-    private static final int START_X2=250;
-    private static final int START_Y2=50;
+    private static final int START_X = 300; // מיקום הכפתור ציר ה-X
+    private static final int START_Y = 300; // מיקום הכפתור ציר ה- Y
+    private static final int ELEMENT_WIDTH = 300; // רוחב כפתור
+    private static final int ELEMENT_HEIGHT = 60; // אורך של הכפתור
     private JButton button;
-    private JLabel label2;
-
 
     public OpenningScreen() {
         this.setSize(1000, 600);
         this.setLayout(null);
 
-
-
-
-        this.label = new JLabel("");//
+        // הגדרת הכותרת
+        this.label = new JLabel("Welcome to Marvel Game");
         this.label.setBounds(START_X, START_Y, ELEMENT_WIDTH, ELEMENT_HEIGHT);
-        this.label.setFont(new Font("arial" , Font.BOLD, 14));
+        this.label.setFont(new Font("arial", Font.BOLD, 24));
+        this.label.setForeground(Color.red); // צביעת הכותרת ב
         this.add(label);
 
-
-        this.label2 = new JLabel("The Marvel Game");//כותרת
-        this.label2.setFont(new Font("ariel" , Font.BOLD, 65));
-        this.label2.setForeground(Color.black);
-        this.label2.setBounds(START_X2,START_Y2, LABEL_WIDTH, LABEL_HEIGHT);
-        this.add(label2);
-
-
+        // הגדרת כפתור
         button = new JButton("Enter");
-        button.setBounds(START_X, START_Y+ELEMENT_HEIGHT, ELEMENT_WIDTH, ELEMENT_HEIGHT);
+        button.setFont(new Font("arial", Font.BOLD, 24));
+        button.setBounds(START_X, START_Y + ELEMENT_HEIGHT, ELEMENT_WIDTH, ELEMENT_HEIGHT);
+        button.setForeground(Color.YELLOW); // צביעת הטקסט של הכפתור בצהוב
+        button.setBackground(Color.black); // צבע רקע של הכפתור (לא חובה)
         this.add(button);
-
     }
-    public void paintComponent(Graphics graphics){
+
+    public void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
-        graphics.drawImage(this.background,  0, 0, 1000,600,null);
+        graphics.drawImage(this.background, 0, 0, 1000, 600, null);
     }
 
     public JButton getButton() {
