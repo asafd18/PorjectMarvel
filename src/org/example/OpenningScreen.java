@@ -26,8 +26,6 @@ public class OpenningScreen extends JPanel {
         this.setLayout(null);
 
 
-
-
         this.label = new JLabel("");//
         this.label.setBounds(START_X, START_Y, ELEMENT_WIDTH, ELEMENT_HEIGHT);
         this.label.setFont(new Font("arial" , Font.BOLD, 14));
@@ -41,6 +39,7 @@ public class OpenningScreen extends JPanel {
         this.add(label2);
 
 
+
         button = new JButton("Enter");
         button.setBounds(START_X, START_Y+ELEMENT_HEIGHT, ELEMENT_WIDTH, ELEMENT_HEIGHT);
         this.add(button);
@@ -48,10 +47,12 @@ public class OpenningScreen extends JPanel {
     }
     public void paintComponent(Graphics graphics){
         super.paintComponent(graphics);
-        graphics.drawImage(this.background,  0, 0, 1000,600,null);
+        graphics.drawImage(this.background,  0, 0, getWidth(),getHeight(),null);
     }
+
 
     public JButton getButton() {
         return button;
     }
 }
+
