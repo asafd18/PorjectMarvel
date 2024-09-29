@@ -25,7 +25,6 @@ public class OpenningScreen extends JPanel {
         this.setSize(1000, 600);
         this.setLayout(null);
 
-
         this.label = new JLabel("");//
         this.label.setBounds(START_X, START_Y, ELEMENT_WIDTH, ELEMENT_HEIGHT);
         this.label.setFont(new Font("arial" , Font.BOLD, 14));
