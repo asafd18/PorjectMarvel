@@ -1,9 +1,11 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
+import java.util.Objects;
 
 public class Window extends JFrame {
-
+    ImageIcon icon = new ImageIcon("Resource/resources/MARVEL.png");
 
 
 
@@ -18,8 +20,6 @@ public class Window extends JFrame {
         OpenningScreen openningScreen = new OpenningScreen();
         this.add(openningScreen);
         openningScreen.setVisible(true);
-
-
 
 
 
