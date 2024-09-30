@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class OptionsScreen extends JPanel {
-    private  JButton  gameScene;
-    private  JButton instructions;
-    private  JButton garage;
-    private  JButton exitFromGame;
+    private JButton gameScene;
+    private JButton instructions;
+    private JButton garage;
+    private JButton exitFromGame;
     private final Image background;
 
     public OptionsScreen() {
@@ -36,12 +36,12 @@ public class OptionsScreen extends JPanel {
         this.exitFromGame.addActionListener(e -> System.exit(0));
         this.add(exitFromGame);
 
-        // Action listener for the Start Play button
-        gameScene.addActionListener(e -> {
+        // Action listener for the Select Character button to switch to character selection screen
+        garage.addActionListener(e -> {
             JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
-            frame.setContentPane(new SelectCharacters());
-            frame.revalidate();
-            frame.repaint();
+            frame.setContentPane(new SelectCharacters());  // Transition to SelectCharacters screen
+            frame.revalidate();  // Revalidate the frame to apply the changes
+            frame.repaint();  // Repaint the frame to refresh the UI
         });
     }
 
